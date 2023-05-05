@@ -7,7 +7,7 @@
     android:paddingStart="4dp"
     android:paddingEnd="4dp"
     app:circularflow_radiusInDP="5dp"
-    tools:context=".CV_INFO">
+    tools:context=".CvInfo">
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="0dp"

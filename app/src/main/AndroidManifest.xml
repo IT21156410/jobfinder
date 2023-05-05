@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JobSeeker">
         <activity
-            android:name=".CV_INFO"
+            android:name=".CvInfo"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
