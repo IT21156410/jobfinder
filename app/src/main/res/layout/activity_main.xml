@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"
+    app:circularflow_radiusInDP="5dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="412dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="127dp"
+        app:layout_constraintBottom_toTopOf="@+id/mainImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/goBack"
+            android:layout_width="54dp"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:backgroundTint="#FFFFFF"
+            android:text="@string/back"
+            app:icon="?attr/actionModeCloseDrawable"
+            app:iconTint="#95000000"
+            app:iconTintMode="src_in" />
+    </com.google.android.material.navigation.NavigationView>
+
+    <ImageView
+        android:id="@+id/mainImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="181dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="441dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cv_ico" />
+
+    <TextView
+        android:id="@+id/HeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="405dp"
+        android:text="@string/build_your_profile"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainImg" />
+
+    <TextView
+        android:id="@+id/subHeaderText"
+        android:layout_width="378dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="139dp"
+        android:text="@string/import_your_resume_to_pre_fill_profile_details_or_enter_them_as_you_go"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeaderText" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="369dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="18dp"
+        android:background="#271C1C1C"
+        android:padding="5dp"
+        android:paddingStart="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/your_reviews_and_content_submissions_remain_completely_anonymous"
+        android:textAlignment="center"
+        android:textColor="#616161"
+        app:layout_constraintBottom_toTopOf="@+id/import_cv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeaderText"
+        app:layout_constraintVertical_bias="0.756" />
+
+    <Button
+        android:id="@+id/import_cv"
+        android:layout_width="372dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="189dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="66dp"
+        android:background="#673AB7"
+        android:outlineProvider="none"
+        android:text="@string/import_cv"
+        android:textAllCaps="false"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeaderText"
+        app:layout_constraintVertical_bias="0.65"
+        app:rippleColor="#000000" />
+
+    <Button
+        android:id="@+id/enter_cv"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="372dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="289dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="24dp"
+        android:background="#00000000"
+        android:breakStrategy="balanced"
+        android:outlineProvider="none"
+        android:text="@string/i_ll_type_in_my_details"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeaderText"
+        app:layout_constraintVertical_bias="0.476"
+        app:layout_marginBaseline="1px"
+        app:strokeColor="#000000" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

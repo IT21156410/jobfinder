@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">JobSeeker</string>
+    <string name="todo">TODO</string>
+    <string name="build_your_profile">Build Your Profile</string>
+    <string name="import_cv">Import CV</string>
+    <string name="i_ll_type_in_my_details">I\'ll Type in my details</string>
+    <string name="your_reviews_and_content_submissions_remain_completely_anonymous">Your reviews and content submissions remain completely anonymous</string>
+    <string name="import_your_resume_to_pre_fill_profile_details_or_enter_them_as_you_go">Import your resume to pre-fill profile details, Or enter them as you go.</string>
+    <string name="back">back</string>
+    <string name="jan_2015___feb_2022_5_years">Jan 2015 - Feb 2022 5 Years</string>
+    <string name="amazon_inc">Amazon Inc</string>
+    <string name="manager">Manager</string>
+    <string name="work_experience_ek1">Work experience</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id commodo egestas metus interdum dolor.</string>
+    <string name="about_me_ek1">About me</string>
+    <string name="sep_2010___aug_2013_5_years">Sep 2010 - Aug 2013   5 Years</string>
+    <string name="university_of_oxford">University of Oxford</string>
+    <string name="information_technology">Information Technology</string>
+    <string name="education_ek1">Education</string>
+    <string name="_14_feb_2022_at_11_30_am">14 Feb 2022 at 11:30 am</string>
+    <string name="resume_ek1">Resume</string>
+    <string name="leadership">Leadership</string>
+    <string name="teamwork">Teamwork</string>
+    <string name="target_oriented">Target oriented</string>
+    <string name="consistent">Consistent</string>
+    <string name="visioner">Visioner</string>
+    <string name="__5_more">+5 more</string>
+    <string name="see_more">See more</string>
+    <string name="skill_ek1">Skill</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="scrollView">scrollView</string>
+</resources>
