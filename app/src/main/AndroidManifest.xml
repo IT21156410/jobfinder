@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JobSeeker">
         <activity
+            android:name=".CV_INFO"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
