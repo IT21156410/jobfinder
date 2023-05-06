@@ -16,5 +16,12 @@ class MainActivity : AppCompatActivity() {
             // start your next activity
             startActivity(intent)
         }
+
+        val goToJobSearchActivityButton = findViewById<Button>(R.id.gotoJobSearch)
+        goToJobSearchActivityButton.setOnClickListener {
+            val intent = Intent(this, JobSearchActivity::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
     }
 }

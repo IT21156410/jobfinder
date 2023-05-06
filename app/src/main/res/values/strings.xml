@@ -30,4 +30,18 @@
     <string name="edit_profile">Edit profile</string>
     <string name="scrollView">scrollView</string>
     <string name="add_cv">Add CV</string>
+    <string name="job_title">Job title</string>
+    <string name="location">Location</string>
+    <string name="search">Search</string>
+    <string name="job_search">Job Search</string>
+    <string name="company_name">Company Name</string>
+    <string name="job_description">Job Description</string>
+    <string name="job_location">Job Location</string>
+    <string name="job_salary">Job Salary</string>
+    <string name="apply">Apply</string>
+    <string name="job_category">Job Category</string>
+    <string name="job_date">Job Date</string>
+    <string name="create_job">Create Job</string>
+    <string name="job_post_management_title">Job Postt Management</string>
+    <string name="delete">Delete</string>
 </resources>
