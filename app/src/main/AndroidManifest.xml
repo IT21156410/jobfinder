@@ -10,6 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JobSeeker">
         <activity
+            android:name=".ResetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".OTPVerification"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Salary"
+            android:exported="false" />
+        <activity
+            android:name=".CompanyReviews"
+            android:exported="false" />
+        <activity
+            android:name=".CompanyInfo"
+            android:exported="false" />
+        <activity
+            android:name=".CompanyList"
+            android:exported="false" />
+        <activity
             android:name=".UserProfile"
             android:exported="false" />
         <activity
