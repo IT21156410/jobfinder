@@ -3,12 +3,20 @@ package com.example.jobseeker
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract.Profile
 import android.widget.Button
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var firebaseAuth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        firebaseAuth = Firebase.auth
+
         setContentView(R.layout.activity_main)
 
         val goToCvActivityButton = findViewById<Button>(R.id.gotoCvActivity)
@@ -17,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             // start your next activity
             startActivity(intent)
         }
-         val goToCvProfileButton = findViewById<Button>(R.id.goToCvProfile)
+        val goToCvProfileButton = findViewById<Button>(R.id.goToCvProfile)
         goToCvProfileButton.setOnClickListener {
             val intent = Intent(this, CvProfile::class.java)
             // start your next activity
@@ -92,10 +100,19 @@ class MainActivity : AppCompatActivity() {
             // start your next activity
             startActivity(intent)
         }
-        val signUpButton = findViewById<Button>(R.id.signUp)
-        signUpButton.setOnClickListener {
-            val intent = Intent(this, SignUp::class.java)
-            // start your next activity
+        val signOutButton = findViewById<Button>(R.id.signOut)
+        signOutButton.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            val intent = Intent(this, SignIn::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        if (firebaseAuth.currentUser == null) {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

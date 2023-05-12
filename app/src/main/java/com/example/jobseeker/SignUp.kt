@@ -7,7 +7,10 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.jobseeker.databinding.ActivitySignUpBinding
 import com.example.jobseeker.model.UserModel
+import com.example.jobseeker.utils.Config.hideDialog
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class SignUp : AppCompatActivity() {
 
@@ -54,6 +57,7 @@ class SignUp : AppCompatActivity() {
                 print("passwords matched")
                 firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
+                        storageData()
                         Toast.makeText(this, "Successfully Sign In", Toast.LENGTH_SHORT).show()
                     } else {
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
@@ -68,5 +72,51 @@ class SignUp : AppCompatActivity() {
         }
     }
 
+    private fun storageData() {
+        val data = UserModel(
+            userid = firebaseAuth.currentUser!!.uid,
+            email = binding.fullName.text.toString(),
+            name = binding.signInEmail.text.toString(),
+            mobile = null,
+            location = null,
+            dob = null,
+            image = null,
+        )
 
+        print("Im in storageData()")
+
+        val uId = firebaseAuth.currentUser!!.uid
+        val database: DatabaseReference = FirebaseDatabase.getInstance().reference
+
+        val userData = mapOf(
+            "userId" to data.userid,
+            "name" to data.name,
+            "email" to data.email,
+            "mobile" to data.mobile,
+            "image" to data.image,
+            "location" to data.location,
+            "dob" to data.dob
+        )
+
+        val uploadData = database.child("users").child(uId).setValue(userData)
+
+        uploadData.addOnCompleteListener {
+
+            hideDialog()
+
+            if (it.isSuccessful) {
+
+                print("Im in image uploaded")
+
+                //after path should be added
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
+                Toast.makeText(this, "User Sign In Successfully", Toast.LENGTH_SHORT).show()
+
+            } else {
+                Toast.makeText(this, it.exception!!.message, Toast.LENGTH_SHORT).show()
+
+            }
+        }
+    }
 }

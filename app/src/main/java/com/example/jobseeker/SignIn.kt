@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.jobseeker.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class SignIn : AppCompatActivity() {
@@ -18,7 +20,7 @@ class SignIn : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        firebaseAuth = FirebaseAuth.getInstance()
+        firebaseAuth = Firebase.auth
 
 
         binding.donthaveAccount.setOnClickListener {
@@ -31,18 +33,21 @@ class SignIn : AppCompatActivity() {
         binding.signIn.setOnClickListener {
             print("signIn clicked")
             val email = binding.signInEmail.text.toString()
-            val pass = binding.password.text.toString()
+            val password = binding.password.text.toString()
 
-            if (email.isNotEmpty() && pass.isNotEmpty()) {
+            if (email.isNotEmpty() && password.isNotEmpty()) {
 
-                firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
-                    if (it.isSuccessful) {
-                        val intent = Intent(this, MainActivity::class.java)
-                        startActivity(intent)
-                    } else {
-                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                firebaseAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            // Sign in success, update UI with the signed-in user's information
+                            val intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Toast.makeText(this, task.exception.toString(), Toast.LENGTH_SHORT).show()
+                        }
                     }
-                }
             } else {
                 Toast.makeText(this, "Empty Fields Are not Allowed !!", Toast.LENGTH_SHORT).show()
 
