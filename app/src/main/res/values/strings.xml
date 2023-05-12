@@ -59,6 +59,7 @@
     <string name="sign_up">Sign up</string>
     <string name="sign_up_with_google">Sign up with Google</string>
     <string name="you_don_t_have_an_account_yet">You don\'t have an account yet?</string>
+    <string name="already_have_account">Already have an account yet?</string>
     <string name="sign_in">Sign in</string>
     <string name="google">TODO</string>
     <string name="arrow">TextView</string>
@@ -154,7 +155,7 @@
     <string name="pn_">pn</string>
     <string name="add_education_1">Add Education</string>
     <string name="des">des</string>
-     <string name="scrollView" translatable="false">scrollView</string>
+    <string name="scrollView" translatable="false">scrollView</string>
     <string name="add_cv" translatable="false">Add CV</string>
     <string name="header" translatable="false">header</string>
     <string name="john_doe">John Doe</string>
@@ -335,4 +336,9 @@
     <string name="new_password">Enter New password</string>
     <string name="Confirm">Enter confirm password</string>
     <string name="reset_password">Reset Password</string>
+
+
+    <string name="enter_end_date">Enter End Date</string>
+    <string name="enter_start_date">Enter Start Date</string>
+    <string name="name">Name</string>
 </resources>
