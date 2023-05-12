@@ -154,7 +154,7 @@
     <string name="pn_">pn</string>
     <string name="add_education_1">Add Education</string>
     <string name="des">des</string>
-     <string name="scrollView" translatable="false">scrollView</string>
+    <string name="scrollView" translatable="false">scrollView</string>
     <string name="add_cv" translatable="false">Add CV</string>
     <string name="header" translatable="false">header</string>
     <string name="john_doe">John Doe</string>
@@ -335,4 +335,10 @@
     <string name="new_password">Enter New password</string>
     <string name="Confirm">Enter confirm password</string>
     <string name="reset_password">Reset Password</string>
+    <string name="add_job_post">Add job Post</string>
+    <string name="position">Position</string>
+    <string name="qualification">Qualification</string>
+    <string name="job_type">Job Type</string>
+    <string name="manage_job_posts">Manage Job Posts</string>
+    <string name="find_jobs">Find Jobs</string>
 </resources>
