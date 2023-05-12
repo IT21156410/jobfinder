@@ -94,5 +94,23 @@ class MainActivity : AppCompatActivity() {
             // start your next activity
             startActivity(intent)
         }
+        val addWorkExperienceButton = findViewById<Button>(R.id.addWorkExperience)
+        addWorkExperienceButton.setOnClickListener {
+            val intent = Intent(this, AddWorkExperience::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
+        val goToProfileButton = findViewById<Button>(R.id.goToProfile)
+        goToProfileButton.setOnClickListener {
+            val intent = Intent(this, UserProfile::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
+        val signUpButton = findViewById<Button>(R.id.signUp)
+        signUpButton.setOnClickListener {
+            val intent = Intent(this, SignUp::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
     }
 }

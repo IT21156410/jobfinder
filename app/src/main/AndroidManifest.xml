@@ -9,6 +9,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/Theme.JobSeeker">
+
         <activity
                 android:name=".AddJobPostActivity"
                 android:exported="false">
@@ -16,6 +17,12 @@
                     android:name="android.app.lib_name"
                     android:value="" />
         </activity>
+        <activity
+                android:name=".SignUp"
+                android:exported="false" />
+        <activity
+                android:name=".AddWorkExperience"
+                android:exported="false" />
         <activity
                 android:name=".ResetPassword"
                 android:exported="false" />
