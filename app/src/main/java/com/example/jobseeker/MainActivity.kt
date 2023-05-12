@@ -37,9 +37,46 @@ class MainActivity : AppCompatActivity() {
             // start your next activity
             startActivity(intent)
         }
-        val goToProfileButton = findViewById<Button>(R.id.goToProfile)
-        goToProfileButton.setOnClickListener {
-            val intent = Intent(this, Profile::class.java)
+
+        val goToCompanyListButton = findViewById<Button>(R.id.goToCompanyList)
+        goToCompanyListButton.setOnClickListener {
+            val intent = Intent(this, CompanyList::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
+        val goToCompanyInfoButton = findViewById<Button>(R.id.goToCompanyInfo)
+        goToCompanyInfoButton.setOnClickListener {
+            val intent = Intent(this, CompanyInfo::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
+        val gotToCompanyReviewsButton = findViewById<Button>(R.id.gotToCompanyReviews)
+        gotToCompanyReviewsButton.setOnClickListener {
+            val intent = Intent(this, CompanyReviews::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
+        val goToSalaryButton = findViewById<Button>(R.id.goToSalary)
+        goToSalaryButton.setOnClickListener {
+            val intent = Intent(this, Salary::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
+        val goToForgotPasswordButton = findViewById<Button>(R.id.goToForgotPassword)
+        goToForgotPasswordButton.setOnClickListener {
+            val intent = Intent(this, ForgotPassword::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
+        val otpVerifyBtnButton = findViewById<Button>(R.id.otpVerifyBtn)
+        otpVerifyBtnButton.setOnClickListener {
+            val intent = Intent(this, OTPVerification::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
+        val resetPasswordButton = findViewById<Button>(R.id.resetPassword)
+        resetPasswordButton.setOnClickListener {
+            val intent = Intent(this, ResetPassword::class.java)
             // start your next activity
             startActivity(intent)
         }
