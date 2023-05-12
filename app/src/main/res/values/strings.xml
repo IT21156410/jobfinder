@@ -157,7 +157,7 @@
      <string name="scrollView" translatable="false">scrollView</string>
     <string name="add_cv" translatable="false">Add CV</string>
     <string name="header" translatable="false">header</string>
-    <string name="john_doe">John Doe</string>
+    <string name="john_doe">Navod</string>
     <string name="profile_image">profile_image</string>
     <string name="settings_icon">settings_icon</string>
     <string name="button">Button</string>
@@ -335,4 +335,26 @@
     <string name="new_password">Enter New password</string>
     <string name="Confirm">Enter confirm password</string>
     <string name="reset_password">Reset Password</string>
+    <string name="headerbg">Header Bg</string>
+    <string name="profile_pic">Profile_pic</string>
+    <string name="share_icon">Share_icon</string>
+    <string name="Setting_icon">setting_icon</string>
+    <string name="work_experience_icon">Work_experience_icon</string>
+    <string name="_add">Add</string>
+    <string name="amazon_inc_">Amazon Inc</string>
+    <string name="jan_2015_feb_2022">Jan 2015 - Feb 2022 .</string>
+    <string name="_5_years">5 Years</string>
+    <string name="education">Education</string>
+    <string name="add__">Add</string>
+    <string name="information_technology_">Information Technology</string>
+    <string name="university_of_oxford_">University of Oxford</string>
+    <string name="sep_2010_aug_2013_">Sep 2010 - Aug 2013 .</string>
+    <string name="_5_years_">5 Years</string>
+    <string name="skill_">Skill</string>
+    <string name="_add__">Add</string>
+    <string name="XML">xml_</string>
+    <string name="univercity">Univercity</string>
+    <string name="Skill_">Skill_</string>
+    <string name="PHP">php</string>
+    <string name="js">JS</string>
 </resources>
