@@ -28,8 +28,6 @@
     <string name="see_more">See more</string>
     <string name="skill_ek1">Skill</string>
     <string name="edit_profile">Edit profile</string>
-    <string name="scrollView">scrollView</string>
-    <string name="add_cv">Add CV</string>
     <string name="job_title">Job title</string>
     <string name="location">Location</string>
     <string name="search">Search</string>
@@ -156,4 +154,14 @@
     <string name="pn_">pn</string>
     <string name="add_education_1">Add Education</string>
     <string name="des">des</string>
+     <string name="scrollView" translatable="false">scrollView</string>
+    <string name="add_cv" translatable="false">Add CV</string>
+    <string name="header" translatable="false">header</string>
+    <string name="john_doe">John Doe</string>
+    <string name="profile_image">profile_image</string>
+    <string name="settings_icon">settings_icon</string>
+    <string name="button">Button</string>
+    <string name="cv_profile">Cv Profile</string>
+    <string name="user">user_image</string>
+    <string name="settings">settings_icon</string>
 </resources>

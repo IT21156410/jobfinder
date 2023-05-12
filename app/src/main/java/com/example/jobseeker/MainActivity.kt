@@ -17,6 +17,12 @@ class MainActivity : AppCompatActivity() {
             // start your next activity
             startActivity(intent)
         }
+         val goToCvProfileButton = findViewById<Button>(R.id.goToCvProfile)
+        goToCvProfileButton.setOnClickListener {
+            val intent = Intent(this, CvProfile::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
 
         val goToJobSearchActivityButton = findViewById<Button>(R.id.gotoJobSearch)
         goToJobSearchActivityButton.setOnClickListener {
