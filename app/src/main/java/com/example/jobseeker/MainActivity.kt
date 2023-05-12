@@ -46,6 +46,20 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val addJobPostBtnButton = findViewById<Button>(R.id.addJobPostBtn)
+        addJobPostBtnButton.setOnClickListener {
+            val intent = Intent(this, AddJobPostActivity::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
+
+        val manageJobPostBtnButton = findViewById<Button>(R.id.manageJobPostBtn)
+        manageJobPostBtnButton.setOnClickListener {
+            val intent = Intent(this, JobPostManageActivity::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
+
         val goToCompanyListButton = findViewById<Button>(R.id.goToCompanyList)
         goToCompanyListButton.setOnClickListener {
             val intent = Intent(this, CompanyList::class.java)
