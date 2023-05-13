@@ -78,8 +78,8 @@ class SignUp : AppCompatActivity() {
     private fun storageData() {
         val data = UserModel(
             userid = firebaseAuth.currentUser!!.uid,
-            email = binding.fullName.text.toString(),
-            name = binding.signInEmail.text.toString(),
+            email = binding.signInEmail.text.toString(),
+            name = binding.fullName.text.toString(),
             mobile = null,
             location = null,
             dob = null,

@@ -30,7 +30,7 @@
           android:layout_width="80dp"
           android:layout_height="80dp"
           android:contentDescription="@string/profile"
-          app:layout_constraintBottom_toTopOf="@+id/textView26"
+          app:layout_constraintBottom_toTopOf="@+id/profileName"
           app:layout_constraintEnd_toStartOf="@+id/imageButton"
           app:layout_constraintHorizontal_bias="0.168"
           app:layout_constraintStart_toStartOf="parent"
@@ -49,13 +49,13 @@
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintHorizontal_bias="0.933"
-          app:layout_constraintStart_toEndOf="@+id/textView26"
+          app:layout_constraintStart_toEndOf="@+id/profileName"
           app:layout_constraintTop_toTopOf="parent"
           app:layout_constraintVertical_bias="0.083"
           app:srcCompat="@drawable/icon_setting" />
 
       <TextView
-          android:id="@+id/textView26"
+          android:id="@+id/profileName"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginTop="135dp"
@@ -103,7 +103,7 @@
              android:inputType="textEmailAddress" />
 
          <com.google.android.material.textfield.TextInputEditText
-             android:id="@+id/phone"
+             android:id="@+id/mobile"
              android:layout_width="381dp"
              android:layout_height="57dp"
              android:layout_gravity="center"
