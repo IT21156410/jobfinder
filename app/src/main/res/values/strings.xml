@@ -328,7 +328,7 @@
     <string name="enter_verification_code_">Enter Verification code</string>
     <string name="_7">7</string>
     <string name="otp_verify">OTP Verify</string>
-
+    <string name="present">Present</string>
     <string name="Enter_New_Password">New Password</string>
     <string name="edit_password">edit password</string>
     <string name="Confirm_Password">Confirm Password</string>
@@ -383,4 +383,19 @@
     <string name="cancel">Cancel</string>
     <string name="submit">Submit</string>
     <string name="review_">Review</string>
+    <string name="employee_salary">Employee Salary</string>
+    <string name="today_s_date">Today s Date</string>
+    <string name="Back_arrow">Back_arrow_</string>
+    <string name="Date">Date</string>
+    <string name="employee_name">Employee Name</string>
+    <string name="name__">Name</string>
+    <string name="employee_id">Employee ID</string>
+    <string name="employee_status">Employee Status</string>
+    <string name="full_time">Full-Time</string>
+    <string name="part_time">Part-Time</string>
+    <string name="recommended_salary">Recommended Salary</string>
+    <string name="cancel_">Cancel</string>
+    <string name="button_">Button</string>
+    <string name="salary_">Salary</string>
+    <string name="id_">ID</string>
 </resources>
