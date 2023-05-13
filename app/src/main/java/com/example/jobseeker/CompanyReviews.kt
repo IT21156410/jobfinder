@@ -65,11 +65,20 @@ class CompanyReviews : AppCompatActivity() {
                         )
                         params.bottomMargin =
                             resources.getDimensionPixelSize(R.dimen.card_margin_top)
+
                         reviewView.layoutParams = params
+                        val reviewId = reviewSnapshot.key
+                        // Set OnClickListener for edit button
+                        val editButton = reviewView.findViewById<Button>(R.id.buttonEditReview)
+                        editButton.setOnClickListener {
+                            val intent = Intent(this@CompanyReviews, AddReviews::class.java)
+                            intent.putExtra("reviewId", reviewId)
+                            intent.putExtra("isEdit", true)
+                            startActivity(intent)
+                        }
 
                         // Set OnClickListener for delete button
                         val deleteButton = reviewView.findViewById<Button>(R.id.buttonDeleteReview)
-                        val reviewId = reviewSnapshot.key
                         deleteButton.setOnClickListener {
                             deleteJobPost(reviewId!!)
                         }
