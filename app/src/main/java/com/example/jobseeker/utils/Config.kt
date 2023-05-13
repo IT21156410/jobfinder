@@ -10,7 +10,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 object Config {
     private var dialog: AlertDialog? = null
 
-    fun showDialog(context : Context){
+    fun showDialog(context: Context) {
         dialog = MaterialAlertDialogBuilder(context)
             .setView(R.layout.activity_loading)
             .setCancelable(false)
