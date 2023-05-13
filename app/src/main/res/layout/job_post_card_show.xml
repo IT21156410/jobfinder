@@ -62,7 +62,7 @@
                 app:layout_constraintVertical_bias="0.854" />
 
         <Button
-                android:id="@+id/buttonEditJobPost"
+                android:id="@+id/jobPostBookMarkButton"
                 android:layout_width="21dp"
                 android:layout_height="22dp"
                 android:background="@drawable/bookmark_icon"
