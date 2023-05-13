@@ -370,4 +370,5 @@
     <string name="sign_into_use_our_service">Sign into use our service</string>
     <string name="enter_password">Enter Password</string>
     <string name="sign_out">Sign Out</string>
+    <string name="please_wait">Please Wait</string>
 </resources>
