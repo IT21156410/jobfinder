@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/gotoCvActivity"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="@string/add_cv" />
+        <item
+                android:id="@+id/goToCvProfile"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="@string/cv_profile" />
+        <item
+                android:id="@+id/addEducationBtn"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="@string/add_education_1" />
+        <item
+                android:id="@+id/gotoJobSearch"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="@string/job_search" />
+        <item
+                android:id="@+id/addJobPostBtn"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="@string/add_job_post" />
+        <item
+                android:id="@+id/manageJobPostBtn"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="@string/manage_job_posts" />
+        <item
+                android:id="@+id/goToCompanyList"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="@string/company_list" />
+        <item
+                android:id="@+id/goToCompanyInfo"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="@string/company_info" />
+        <item
+                android:id="@+id/gotToCompanyReviews"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="@string/reviews" />
+        <item
+                android:id="@+id/goToSalary"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="@string/salary" />
+        <item
+                android:id="@+id/goToForgotPassword"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="@string/forgot_password" />
+        <item
+                android:id="@+id/otpVerifyBtn"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="@string/otp_verify" />
+        <item
+                android:id="@+id/resetPassword"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="@string/reset_password" />
+        <item
+                android:id="@+id/goToProfile"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="@string/profile" />
+        <item
+                android:id="@+id/signOut"
+                android:icon="@android:drawable/ic_dialog_dialer"
+                android:title="@string/sign_out" />
+    </group>
+</menu>
