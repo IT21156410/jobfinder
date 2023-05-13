@@ -19,5 +19,11 @@ class CvProfile : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val addWorkExperienceButton = findViewById<ImageButton>(R.id.addWorkExperience)
+        addWorkExperienceButton.setOnClickListener {
+            val intent = Intent(this, AddWorkExperience::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
     }
 }

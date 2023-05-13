@@ -373,7 +373,7 @@
         app:layout_constraintVertical_bias="0.763" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/addWorkExperience"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="148dp"
@@ -397,7 +397,7 @@
         android:backgroundTint="#00FFFFFF"
         android:backgroundTintMode="src_atop"
         app:layout_constraintBottom_toTopOf="@+id/button8"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/addWorkExperience"
         app:layout_constraintHorizontal_bias="0.861"
         app:layout_constraintStart_toEndOf="@+id/textView27"
         app:layout_constraintTop_toBottomOf="@+id/imageView29"

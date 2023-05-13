@@ -27,12 +27,6 @@ class AddReviews : AppCompatActivity() {
 
         firebaseAuth = Firebase.auth
 
-        binding.submitReview.setOnClickListener {
-            if (validateData()) {
-                storeData()
-            }
-        }
-
         val isEdit = intent.getBooleanExtra("isEdit", false)
         var reviewId: String? = null
         if (isEdit) {

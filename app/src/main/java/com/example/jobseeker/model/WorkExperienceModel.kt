@@ -1,6 +1,7 @@
 package com.example.jobseeker.model
 
 data class WorkExperienceModel(
+    val userId: String? = "",
     val position: String? = "",
     val companyName: String? = "",
     val startDate: String? = "",
@@ -8,5 +9,5 @@ data class WorkExperienceModel(
     val currentPosition: Boolean? = true
 ) {
 
-    constructor() : this("", "", "", "", true)
+    constructor() : this("", "", "", "", "", true)
 }
