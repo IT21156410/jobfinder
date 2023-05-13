@@ -4,18 +4,18 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.jobseeker.databinding.ActivityAddJobPostBinding
+import com.example.jobseeker.databinding.ActivityJobPostAddBinding
 import com.example.jobseeker.model.JobPostModel
 import com.google.firebase.database.FirebaseDatabase
 
-class AddJobPostActivity : AppCompatActivity() {
+class JobPostAddActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityAddJobPostBinding
+    private lateinit var binding: ActivityJobPostAddBinding
     private val database = FirebaseDatabase.getInstance().reference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAddJobPostBinding.inflate(layoutInflater)
+        binding = ActivityJobPostAddBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.jobPostSubmitButton.setOnClickListener {
