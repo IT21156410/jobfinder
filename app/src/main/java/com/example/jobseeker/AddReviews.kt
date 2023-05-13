@@ -46,17 +46,17 @@ class AddReviews : AppCompatActivity() {
         if (nicName.isBlank() || title.isBlank() || review.isBlank()) {
             Toast.makeText(this, "Please fill all the fields", Toast.LENGTH_SHORT).show()
             return false
-        } else if (title.length > 15) {
+        } else if (title.length > 20) {
             Toast.makeText(
                 this,
-                "Review title cannot be longer than 15 characters",
+                "Review title cannot be longer than 20 characters",
                 Toast.LENGTH_LONG
             ).show()
             return false
-        } else if (review.length > 30) {
+        } else if (review.length > 60) {
             Toast.makeText(
                 this,
-                "Review cannot be longer than 30 characters",
+                "Review cannot be longer than 60 characters",
                 Toast.LENGTH_LONG
             ).show()
             return false
