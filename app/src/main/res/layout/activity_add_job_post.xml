@@ -85,7 +85,7 @@
                         android:layout_marginTop="-10dp" />
 
                 <EditText
-                        android:id="@+id/editTextTextMultiLine"
+                        android:id="@+id/editTextPosition"
                         android:layout_width="318dp"
                         android:layout_height="53dp"
                         android:autofillHints=""
@@ -117,7 +117,7 @@
                         android:layout_marginTop="-10dp" />
 
                 <EditText
-                        android:id="@+id/editTextTextMultiLine3"
+                        android:id="@+id/editTextQualification"
                         android:layout_width="316dp"
                         android:layout_height="45dp"
                         android:autofillHints=""
@@ -131,7 +131,8 @@
                         app:layout_constraintBottom_toBottomOf="@+id/button5"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintHorizontal_bias="0.492"
-                        app:layout_constraintVertical_bias="0.274" />
+                        app:layout_constraintVertical_bias="0.274"
+                        android:layout_marginTop="140dp" />
 
                 <TextView
                         android:id="@+id/textView22"
@@ -144,11 +145,12 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="@+id/button5"
-                        app:layout_constraintHorizontal_bias="0.107"
-                        app:layout_constraintVertical_bias="0.36" />
+                        app:layout_constraintHorizontal_bias="0.114"
+                        app:layout_constraintVertical_bias="0.36"
+                        android:layout_marginTop="196dp" />
 
                 <EditText
-                        android:id="@+id/editTextTextMultiLine5"
+                        android:id="@+id/editTextCompanyName"
                         android:layout_width="320dp"
                         android:layout_height="50dp"
                         android:autofillHints=""
@@ -162,7 +164,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintHorizontal_bias="0.542"
-                        app:layout_constraintVertical_bias="0.443" />
+                        app:layout_constraintVertical_bias="0.443"
+                        android:layout_marginTop="228dp" />
 
                 <TextView
                         android:id="@+id/textView23"
@@ -180,7 +183,7 @@
                         app:layout_constraintVertical_bias="0.536" />
 
                 <EditText
-                        android:id="@+id/editTextDate"
+                        android:id="@+id/editTextStartDate"
                         android:layout_width="122dp"
                         android:layout_height="52dp"
                         android:autofillHints=""
@@ -209,7 +212,7 @@
                         app:layout_constraintVertical_bias="0.536" />
 
                 <EditText
-                        android:id="@+id/editTextDate2"
+                        android:id="@+id/editTextEndDate"
                         android:layout_width="116dp"
                         android:layout_height="51dp"
                         android:autofillHints=""
@@ -239,7 +242,7 @@
                         app:layout_constraintVertical_bias="0.716" />
 
                 <EditText
-                        android:id="@+id/editTextTextMultiLine2"
+                        android:id="@+id/editTextJobDescription"
                         android:layout_width="324dp"
                         android:layout_height="55dp"
                         android:autofillHints=""
@@ -248,14 +251,14 @@
                         android:hint=""
                         android:inputType="textMultiLine"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/editTextTextMultiLine"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintVertical_bias="0.812"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.49" />
 
                 <Button
-                        android:id="@+id/button5"
+                        android:id="@+id/jobPostSubmitButton"
                         android:layout_width="279dp"
                         android:layout_height="65dp"
                         android:text="@string/save__"
