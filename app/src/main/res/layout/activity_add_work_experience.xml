@@ -7,7 +7,7 @@
     tools:context=".AddWorkExperience">
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/saveWorkExperience"
         android:layout_width="279dp"
         android:layout_height="65dp"
         android:text="@string/save__"
@@ -19,7 +19,7 @@
         tools:ignore="VisualLintOverlap" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine4"
+        android:id="@+id/companyName"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -72,11 +72,10 @@
         android:textColor="#020101"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/position"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView34"
@@ -93,7 +92,7 @@
         app:layout_constraintVertical_bias="0.408" />
 
     <TextView
-        android:id="@+id/textView35"
+        android:id="@+id/endDateLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/end_date_"
@@ -107,7 +106,7 @@
         app:layout_constraintVertical_bias="0.531" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/isCurrentPosition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/this_is_my_position_now"
@@ -120,7 +119,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine2"
+        android:id="@+id/position"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -152,7 +151,7 @@
         app:layout_constraintVertical_bias="0.156" />
 
     <EditText
-        android:id="@+id/editTextDate3"
+        android:id="@+id/startDate"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="32dp"
@@ -169,7 +168,7 @@
         app:layout_constraintVertical_bias="0.468" />
 
     <EditText
-        android:id="@+id/editTextDate4"
+        android:id="@+id/endDate"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="32dp"
@@ -184,4 +183,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.596" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

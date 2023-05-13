@@ -328,7 +328,7 @@
     <string name="enter_verification_code_">Enter Verification code</string>
     <string name="_7">7</string>
     <string name="otp_verify">OTP Verify</string>
-
+    <string name="present">Present</string>
     <string name="Enter_New_Password">New Password</string>
     <string name="edit_password">edit password</string>
     <string name="Confirm_Password">Confirm Password</string>
