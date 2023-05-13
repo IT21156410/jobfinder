@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
         val addJobPostBtnButton = findViewById<Button>(R.id.addJobPostBtn)
         addJobPostBtnButton.setOnClickListener {
-            val intent = Intent(this, AddJobPostActivity::class.java)
+            val intent = Intent(this, JobPostAddActivity::class.java)
             // start your next activity
             startActivity(intent)
         }

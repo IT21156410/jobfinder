@@ -11,7 +11,7 @@
         android:theme="@style/Theme.JobSeeker">
 
         <activity
-            android:name=".AddJobPostActivity"
+            android:name=".JobPostAddActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
