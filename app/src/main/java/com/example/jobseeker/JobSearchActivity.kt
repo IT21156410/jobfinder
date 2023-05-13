@@ -14,7 +14,6 @@ import com.example.jobseeker.utils.Config
 class JobSearchActivity : AppCompatActivity() {
     private lateinit var searchTermEditText: EditText
     private lateinit var locationEditText: EditText
-    private lateinit var jobTitleEditText: EditText
 
     private lateinit var binding: ActivityJobSearchBinding
     private lateinit var database: DatabaseReference
@@ -80,15 +79,18 @@ class JobSearchActivity : AppCompatActivity() {
                 }
                 Config.hideDialog()
 
-                //TODO: Show Card Not found
                 if (linearLayout.childCount == 0) {
                     Toast.makeText(applicationContext, "No job posts found matching the search criteria", Toast.LENGTH_LONG).show()
                 }
+                // remove the listener after it has finished its job
+                jobPostsRef.removeEventListener(this)
             }
 
             override fun onCancelled(error: DatabaseError) {
                 Log.e(ContentValues.TAG, "Failed to retrieve job posts", error.toException())
                 Toast.makeText(applicationContext, "Failed to retrieve job posts", Toast.LENGTH_LONG).show()
+                // remove the listener after it has finished its job
+                jobPostsRef.removeEventListener(this)
             }
         })
     }
