@@ -187,7 +187,7 @@
         app:layout_constraintVertical_bias="0.328" />
 
     <Button
-        android:id="@+id/verifyEmail"
+        android:id="@+id/goToAddReviewPage"
         android:layout_width="158dp"
         android:layout_height="48dp"
         android:text="@string/add_review"
