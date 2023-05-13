@@ -1,6 +1,7 @@
 package com.example.jobseeker
 
 import android.content.ContentValues.TAG
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -27,6 +28,13 @@ class JobPostManageActivity : AppCompatActivity() {
         database = FirebaseDatabase.getInstance().reference
 
         displayJobPosts()
+
+//        binding.buttonEditJobPost.setOnClickListener {
+//            val intent = Intent(this, JobPostAddActivity::class.java)
+//            intent.putExtra("jobPostId", jobPostId)
+//            intent.putExtra("isEdit", true)
+//            startActivity(intent)
+//        }
     }
 
     private fun displayJobPosts() {
@@ -57,9 +65,19 @@ class JobPostManageActivity : AppCompatActivity() {
                         params.bottomMargin = resources.getDimensionPixelSize(R.dimen.job_post_card_margin_top)
                         jobPostView.layoutParams = params
 
+                        val jobId = jobPostSnapshot.key
+
+                        // Set OnClickListener for edit button
+                        val editButton = jobPostView.findViewById<Button>(R.id.buttonEditJobPost)
+                        editButton.setOnClickListener {
+                            val intent = Intent(this@JobPostManageActivity, JobPostAddActivity::class.java)
+                            intent.putExtra("jobPostId", jobId)
+                            intent.putExtra("isEdit", true)
+                            startActivity(intent)
+                        }
+
                         // Set OnClickListener for delete button
                         val deleteButton = jobPostView.findViewById<Button>(R.id.buttonDeleteJobPost)
-                        val jobId = jobPostSnapshot.key
                         deleteButton.setOnClickListener {
                             deleteJobPost(jobId!!)
                         }

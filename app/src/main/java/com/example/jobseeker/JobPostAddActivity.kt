@@ -6,7 +6,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.jobseeker.databinding.ActivityJobPostAddBinding
 import com.example.jobseeker.model.JobPostModel
+import com.example.jobseeker.utils.Config
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class JobPostAddActivity : AppCompatActivity() {
 
@@ -18,9 +22,38 @@ class JobPostAddActivity : AppCompatActivity() {
         binding = ActivityJobPostAddBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val isEdit = intent.getBooleanExtra("isEdit", false)
+        var jobPostId: String? = null
+        if (isEdit) {
+            jobPostId = intent.getStringExtra("jobPostId")
+            if (jobPostId != null) {
+                database.child("job_posts").child(jobPostId).addListenerForSingleValueEvent(object : ValueEventListener {
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        val jobPost = snapshot.getValue(JobPostModel::class.java)
+                        if (jobPost != null) {
+                            binding.editTextPosition.setText(jobPost.position)
+                            binding.editTextQualification.setText(jobPost.qualification)
+                            binding.editTextCompanyName.setText(jobPost.companyName)
+                            binding.editTextStartDate.setText(jobPost.startDate)
+                            binding.editTextEndDate.setText(jobPost.endDate)
+                            binding.editTextJobDescription.setText(jobPost.jobDescription)
+                        }
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                        Toast.makeText(this@JobPostAddActivity, "Failed to retrieve job post data", Toast.LENGTH_SHORT).show()
+                    }
+                })
+            }
+        }
+
         binding.jobPostSubmitButton.setOnClickListener {
             if (validateData()) {
-                storeData()
+                if (isEdit) {
+                    updateData(jobPostId!!)
+                } else {
+                    storeData()
+                }
             }
         }
     }
@@ -62,20 +95,54 @@ class JobPostAddActivity : AppCompatActivity() {
             jobDescription = binding.editTextJobDescription.text.toString()
         )
 
+        Config.showDialog(this)
         val jobPostId = database.child("job_posts").push().key
         if (jobPostId != null) {
             database.child("job_posts").child(jobPostId).setValue(jobPost)
                 .addOnSuccessListener {
+                    Config.hideDialog()
                     Toast.makeText(this, "Job post added successfully", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, JobPostManageActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
                 .addOnFailureListener {
+                    Config.hideDialog()
                     Toast.makeText(this, "Failed to add job post", Toast.LENGTH_SHORT).show()
                 }
         } else {
+            Config.hideDialog()
             Toast.makeText(this, "Failed to generate job post id", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun updateData(jobPostId: String?) {
+        val jobPost = JobPostModel(
+            position = binding.editTextPosition.text.toString(),
+            qualification = binding.editTextQualification.text.toString(),
+            companyName = binding.editTextCompanyName.text.toString(),
+            startDate = binding.editTextStartDate.text.toString(),
+            endDate = binding.editTextEndDate.text.toString(),
+            jobDescription = binding.editTextJobDescription.text.toString()
+        )
+
+        Config.showDialog(this)
+        if (jobPostId != null) {
+            database.child("job_posts").child(jobPostId).setValue(jobPost)
+                .addOnSuccessListener {
+                    Config.hideDialog()
+                    Toast.makeText(this, "Job post updated successfully", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, JobPostManageActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                .addOnFailureListener {
+                    Config.hideDialog()
+                    Toast.makeText(this, "Failed to update job post", Toast.LENGTH_SHORT).show()
+                }
+        } else {
+            Config.hideDialog()
+            Toast.makeText(this, "Failed to update job post", Toast.LENGTH_SHORT).show()
         }
     }
 
