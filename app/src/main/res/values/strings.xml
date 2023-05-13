@@ -370,5 +370,17 @@
     <string name="sign_into_use_our_service">Sign into use our service</string>
     <string name="enter_password">Enter Password</string>
     <string name="sign_out">Sign Out</string>
+    <string name="please_wait">Please Wait</string>
     <string name="job_description_long">JobDescription JobDescription JobDescription JobDescription JobDescription JobDescription JobDescription JobDescription JobDescription JobDescription JobDescription JobDescription.</string>
+    <string name="add_review_">Add Review</string>
+    <string name="back_arrow">back_arrow_</string>
+    <string name="nick_name">Nick Name</string>
+    <string name="title">Title :</string>
+    <string name="name_">Name</string>
+    <string name="title_">Title</string>
+    <string name="nick_name_">Nick Name :</string>
+    <string name="review">Review :</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit">Submit</string>
+    <string name="review_">Review</string>
 </resources>

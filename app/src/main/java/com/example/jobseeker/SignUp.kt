@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.jobseeker.databinding.ActivitySignUpBinding
 import com.example.jobseeker.model.UserModel
+import com.example.jobseeker.utils.Config
 import com.example.jobseeker.utils.Config.hideDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -54,12 +55,14 @@ class SignUp : AppCompatActivity() {
         if (fullName.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
 
             if (password == confirmPass) {
+                Config.showDialog(this)
                 print("passwords matched")
                 firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
                         storageData()
                         Toast.makeText(this, "Successfully Sign In", Toast.LENGTH_SHORT).show()
                     } else {
+                        hideDialog()
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }
                 }
