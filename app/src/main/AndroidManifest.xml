@@ -13,7 +13,7 @@
             android:name=".Add_Salary"
             android:exported="false" />
         <activity
-            android:name=".Add_Reviews"
+            android:name=".AddReviews"
             android:exported="false" />
         <activity
             android:name=".ViewWorkExperience"
