@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/goBackFrmJob"
+            android:id="@+id/goBackManageJobPost"
             android:layout_width="54dp"
             android:layout_height="match_parent"
             android:background="#00000000"
@@ -67,8 +67,7 @@
         <View
                 android:id="@+id/divider5"
                 android:layout_width="match_parent"
-                android:layout_height="11dp"
-                android:background="@android:drawable/screen_background_light_transparent" />
+                android:layout_height="11dp" />
 
         <ScrollView
                 android:layout_width="match_parent"

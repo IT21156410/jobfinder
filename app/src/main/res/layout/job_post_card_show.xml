@@ -9,7 +9,7 @@
         app:cardElevation="4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/jobPostCardLinearLayout"
+            android:id="@+id/jobPostCardShowLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="189dp"
             android:background="#B0E6FF"
@@ -65,7 +65,7 @@
                 android:id="@+id/buttonEditJobPost"
                 android:layout_width="21dp"
                 android:layout_height="22dp"
-                android:background="@drawable/edit_icon"
+                android:background="@drawable/bookmark_icon"
                 android:backgroundTint="#FFC107"
                 android:backgroundTintMode="multiply"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -74,21 +74,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-                android:id="@+id/buttonDeleteJobPost"
-                android:layout_width="20dp"
-                android:layout_height="24dp"
-                android:background="@drawable/delete_icon"
-                android:backgroundTint="@android:color/holo_red_light"
-                android:backgroundTintMode="multiply"
-                android:hapticFeedbackEnabled="false"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.227" />
 
         <ImageView
                 android:layout_width="55dp"

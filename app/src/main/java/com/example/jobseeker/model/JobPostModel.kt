@@ -6,8 +6,9 @@ data class JobPostModel(
     val companyName: String? = "",
     val startDate: String? = "",
     val endDate: String? = "",
-    val jobDescription: String? = ""
+    val jobDescription: String? = "",
+    val location: String? = ""
 ) {
 
-    constructor() : this("", "", "", "", "", "")
+    constructor() : this("", "", "", "", "", "", "")
 }
