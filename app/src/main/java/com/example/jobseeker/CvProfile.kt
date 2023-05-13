@@ -11,6 +11,12 @@ class CvProfile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cv_profile)
 
+        val goToProfileButton = findViewById<Button>(R.id.goToProfile)
+        goToProfileButton.setOnClickListener {
+            val intent = Intent(this, UserProfile::class.java)
+            // start your next activity
+            startActivity(intent)
+        }
 
         val gotToViewWorkExperienceButton = findViewById<ImageButton>(R.id.gotToViewWorkExperience)
         gotToViewWorkExperienceButton.setOnClickListener {
