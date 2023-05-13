@@ -2,6 +2,7 @@ package com.example.jobseeker
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.jobseeker.databinding.ActivityJobPostAddBinding
@@ -21,6 +22,12 @@ class JobPostAddActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityJobPostAddBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val goBackButton = findViewById<Button>(R.id.goBackAddJobPost)
+
+        goBackButton.setOnClickListener {
+            finish()
+        }
 
         val isEdit = intent.getBooleanExtra("isEdit", false)
         var jobPostId: String? = null

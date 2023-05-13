@@ -25,6 +25,12 @@ class JobPostManageActivity : AppCompatActivity() {
         binding = ActivityJobPostManageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val goBackButton = findViewById<Button>(R.id.goBackManageJobPost)
+
+        goBackButton.setOnClickListener {
+            finish()
+        }
+
         database = FirebaseDatabase.getInstance().reference
 
         displayJobPosts()

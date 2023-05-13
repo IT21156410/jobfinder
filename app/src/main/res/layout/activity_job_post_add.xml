@@ -14,7 +14,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
         <Button
-                android:id="@+id/goBackFrmJob"
+                android:id="@+id/goBackAddJobPost"
                 android:layout_width="54dp"
                 android:layout_height="match_parent"
                 android:background="#00000000"
@@ -64,212 +64,224 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="558dp"
-                    tools:layout_editor_absoluteY="1dp">
+                    android:layout_height="match_parent">
 
-                <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="wrap_content"
+                <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/position"
-                        android:textColor="#020101"
-                        android:textStyle="normal"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintHorizontal_bias="0.085"
-                        app:layout_constraintVertical_bias="0.057"
-                        android:layout_marginTop="-10dp" />
+                        android:orientation="vertical" >
 
-                <EditText
-                        android:id="@+id/editTextPosition"
-                        android:layout_width="318dp"
-                        android:layout_height="53dp"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:gravity="start|top"
-                        android:inputType="textMultiLine"
-                        tools:ignore="LabelFor,SpeakableTextPresentCheck"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintHorizontal_bias="0.475"
-                        app:layout_constraintVertical_bias="0.099"
-                        android:textColor="#040202" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="558dp"
+                            tools:layout_editor_absoluteY="1dp">
 
-                <TextView
-                        android:id="@+id/textView21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/qualification"
-                        android:textColor="#020101"
-                        android:textStyle="normal"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintHorizontal_bias="0.102"
-                        app:layout_constraintVertical_bias="0.225"
-                        android:layout_marginTop="-10dp" />
+                        <TextView
+                                android:id="@+id/textView20"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/position"
+                                android:textColor="#020101"
+                                android:textStyle="normal"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintHorizontal_bias="0.085"
+                                app:layout_constraintVertical_bias="0.057"
+                                android:layout_marginTop="-10dp" />
 
-                <EditText
-                        android:id="@+id/editTextQualification"
-                        android:layout_width="316dp"
-                        android:layout_height="45dp"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:gravity="start|top"
-                        android:inputType="textMultiLine"
-                        android:textColor="#040202"
-                        tools:ignore="LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintBottom_toBottomOf="@+id/button5"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintHorizontal_bias="0.492"
-                        app:layout_constraintVertical_bias="0.274"
-                        android:layout_marginTop="140dp" />
+                        <EditText
+                                android:id="@+id/editTextPosition"
+                                android:layout_width="318dp"
+                                android:layout_height="53dp"
+                                android:autofillHints=""
+                                android:ems="10"
+                                android:gravity="start|top"
+                                android:inputType="textMultiLine"
+                                tools:ignore="LabelFor,SpeakableTextPresentCheck"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintHorizontal_bias="0.475"
+                                app:layout_constraintVertical_bias="0.099"
+                                android:textColor="#040202" />
 
-                <TextView
-                        android:id="@+id/textView22"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/company_name"
-                        android:textColor="#050404"
-                        android:textStyle="normal"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="@+id/button5"
-                        app:layout_constraintHorizontal_bias="0.114"
-                        app:layout_constraintVertical_bias="0.36"
-                        android:layout_marginTop="196dp" />
+                        <TextView
+                                android:id="@+id/textView21"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/qualification"
+                                android:textColor="#020101"
+                                android:textStyle="normal"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintHorizontal_bias="0.102"
+                                app:layout_constraintVertical_bias="0.225"
+                                android:layout_marginTop="-10dp" />
 
-                <EditText
-                        android:id="@+id/editTextCompanyName"
-                        android:layout_width="320dp"
-                        android:layout_height="50dp"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:gravity="start|top"
-                        android:hint=""
-                        android:inputType="textMultiLine"
-                        tools:ignore="LabelFor"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="@+id/button5"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintHorizontal_bias="0.542"
-                        app:layout_constraintVertical_bias="0.443"
-                        android:layout_marginTop="228dp" />
+                        <EditText
+                                android:id="@+id/editTextQualification"
+                                android:layout_width="316dp"
+                                android:layout_height="45dp"
+                                android:autofillHints=""
+                                android:ems="10"
+                                android:gravity="start|top"
+                                android:inputType="textMultiLine"
+                                android:textColor="#040202"
+                                tools:ignore="LabelFor,SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintBottom_toBottomOf="@+id/button5"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintHorizontal_bias="0.492"
+                                app:layout_constraintVertical_bias="0.274"
+                                android:layout_marginTop="140dp" />
 
-                <TextView
-                        android:id="@+id/textView23"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/start_date"
-                        android:textColor="#050404"
-                        android:textStyle="normal"
-                        tools:ignore="VisualLintOverlap"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintHorizontal_bias="0.1"
-                        app:layout_constraintVertical_bias="0.536" />
+                        <TextView
+                                android:id="@+id/textView22"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/company_name"
+                                android:textColor="#050404"
+                                android:textStyle="normal"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="@+id/button5"
+                                app:layout_constraintHorizontal_bias="0.114"
+                                app:layout_constraintVertical_bias="0.36"
+                                android:layout_marginTop="196dp" />
 
-                <EditText
-                        android:id="@+id/editTextStartDate"
-                        android:layout_width="122dp"
-                        android:layout_height="52dp"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:inputType="date"
-                        tools:ignore="LabelFor,SpeakableTextPresentCheck,VisualLintOverlap"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintHorizontal_bias="0.116"
-                        app:layout_constraintVertical_bias="0.632" />
+                        <EditText
+                                android:id="@+id/editTextCompanyName"
+                                android:layout_width="320dp"
+                                android:layout_height="50dp"
+                                android:autofillHints=""
+                                android:ems="10"
+                                android:gravity="start|top"
+                                android:hint=""
+                                android:inputType="textMultiLine"
+                                tools:ignore="LabelFor"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="@+id/button5"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintHorizontal_bias="0.542"
+                                app:layout_constraintVertical_bias="0.443"
+                                android:layout_marginTop="228dp" />
 
-                <TextView
-                        android:id="@+id/textView24"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/end_date"
-                        android:textColor="#040202"
-                        android:textStyle="normal"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintHorizontal_bias="0.709"
-                        app:layout_constraintVertical_bias="0.536" />
+                        <TextView
+                                android:id="@+id/textView23"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/start_date"
+                                android:textColor="#050404"
+                                android:textStyle="normal"
+                                tools:ignore="VisualLintOverlap"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintHorizontal_bias="0.1"
+                                app:layout_constraintVertical_bias="0.536" />
 
-                <EditText
-                        android:id="@+id/editTextEndDate"
-                        android:layout_width="116dp"
-                        android:layout_height="51dp"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:inputType="date"
-                        tools:ignore="LabelFor,SpeakableTextPresentCheck"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintVertical_bias="0.631"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintHorizontal_bias="0.897" />
+                        <EditText
+                                android:id="@+id/editTextStartDate"
+                                android:layout_width="122dp"
+                                android:layout_height="52dp"
+                                android:autofillHints=""
+                                android:ems="10"
+                                android:inputType="date"
+                                tools:ignore="LabelFor,SpeakableTextPresentCheck,VisualLintOverlap"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintHorizontal_bias="0.116"
+                                app:layout_constraintVertical_bias="0.632" />
 
-                <TextView
-                        android:id="@+id/textView25"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/job_description"
-                        android:textColor="#050404"
-                        android:textStyle="normal"
-                        tools:ignore="VisualLintOverlap"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintHorizontal_bias="0.099"
-                        app:layout_constraintVertical_bias="0.716" />
+                        <TextView
+                                android:id="@+id/textView24"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/end_date"
+                                android:textColor="#040202"
+                                android:textStyle="normal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintHorizontal_bias="0.709"
+                                app:layout_constraintVertical_bias="0.536" />
 
-                <EditText
-                        android:id="@+id/editTextJobDescription"
-                        android:layout_width="324dp"
-                        android:layout_height="55dp"
-                        android:autofillHints=""
-                        android:ems="10"
-                        android:gravity="start|top"
-                        android:hint=""
-                        android:inputType="textMultiLine"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintVertical_bias="0.812"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.49" />
+                        <EditText
+                                android:id="@+id/editTextEndDate"
+                                android:layout_width="116dp"
+                                android:layout_height="51dp"
+                                android:autofillHints=""
+                                android:ems="10"
+                                android:inputType="date"
+                                tools:ignore="LabelFor,SpeakableTextPresentCheck"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintVertical_bias="0.631"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintHorizontal_bias="0.897" />
 
-                <Button
-                        android:id="@+id/jobPostSubmitButton"
-                        android:layout_width="279dp"
-                        android:layout_height="65dp"
-                        android:text="@string/save__"
-                        tools:ignore="VisualLintOverlap"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintVertical_bias="0.985" />
+                        <TextView
+                                android:id="@+id/textView25"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/job_description"
+                                android:textColor="#050404"
+                                android:textStyle="normal"
+                                tools:ignore="VisualLintOverlap"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintHorizontal_bias="0.099"
+                                app:layout_constraintVertical_bias="0.716" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                        <EditText
+                                android:id="@+id/editTextJobDescription"
+                                android:layout_width="324dp"
+                                android:layout_height="55dp"
+                                android:autofillHints=""
+                                android:ems="10"
+                                android:gravity="start|top"
+                                android:hint=""
+                                android:inputType="textMultiLine"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintVertical_bias="0.812"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.49" />
+
+                        <Button
+                                android:id="@+id/jobPostSubmitButton"
+                                android:layout_width="279dp"
+                                android:layout_height="65dp"
+                                android:text="@string/save__"
+                                tools:ignore="VisualLintOverlap"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintVertical_bias="0.967" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </ScrollView>
+
         </LinearLayout>
 
     </LinearLayout>
